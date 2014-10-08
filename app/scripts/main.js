@@ -46,7 +46,7 @@ var test = repos.forEach(function(repo){
 
   username = repo.owner.login;
 
-  $('.repo_body').append(render(repo))
+//  $('.repo_body').append(render(repo))
 
 })
 
