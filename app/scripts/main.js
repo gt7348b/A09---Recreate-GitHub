@@ -3,7 +3,7 @@ console.log('The Iron Yard Rocks');
 
 var person_name,
     username,
-    location,
+    loc,
     join,
     repo_title,
     repo_update,
@@ -41,4 +41,18 @@ repos.forEach(function(repo){
 
   repo_fork = repo.forks_count;
 
+  username = repo.owner.login;
+
+
+
 })
+
+  username = userinfo.login;
+
+  person_name = userinfo.name;
+
+  photo = userinfo.avatar_url;
+
+  loc = userinfo.location;
+
+  join = userinfo.created_at;

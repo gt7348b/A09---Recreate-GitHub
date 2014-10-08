@@ -1,4 +1,4 @@
-var user = [{
+var userinfo = {
   "login": "gt7348b",
   "id": 8863455,
   "avatar_url": "https://avatars.githubusercontent.com/u/8863455?v=2",
@@ -30,4 +30,3 @@ var user = [{
   "created_at": "2014-09-22T16:03:59Z",
   "updated_at": "2014-10-08T16:22:11Z"
 }
-]
