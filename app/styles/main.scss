@@ -63,6 +63,22 @@ section{
     @include span-columns(9);
     background-color: $color3;
 
+    .midbox {
+
+      .midleft {
+        button{
+          @include button(shiny, $color3);
+        }
+      }
+
+      .midright {
+        button{
+          @include button(shiny, $color5);
+        }
+      }
+
+    }
+
     .repositories{
       background-color: $color3;
 
