@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## This is assignment #9 - Iron Yard Fron End Engineering
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This is the assignment to recreate my personal GitHub repository page. It is due Monday October 13, 2014
