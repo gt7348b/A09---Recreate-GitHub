@@ -17,6 +17,12 @@ $color7:  #dddddd;
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    }
+
 }
 
 //This is the formatting for the header
@@ -24,11 +30,6 @@ body {
 .header {
   background-color: $color1;
   text-align: center;
-
-  li {
-    display: inline-block;
-    vertical-align: middle;
-    }
 
   .header_left{
     float: left;
@@ -51,19 +52,48 @@ body {
 
 //This is the formating for the main body
 
-.main_body{
+section{
   @include outer-container;
 
-  .sidebar{
+  aside{
     @include span-columns(3);
   }
 
-  .reposide{
+  article {
     @include span-columns(9);
-    background-color: $color2;
+    background-color: $color3;
 
     .repositories{
       background-color: $color3;
+
+      //This is the left side of the repo
+
+      .repoleft {
+        float: left;
+
+
+        h2 {
+          color: $color4;
+        }
+
+        .repodesc {
+          color: $color2;
+        }
+
+        .reposubmit {
+          color: $color2;
+        }
+      }
+
+      //This is the right side of the repo
+
+      .reporight {
+          float: right;
+          color: $color2;
+
+
+
+      }
     }
   }
 }
