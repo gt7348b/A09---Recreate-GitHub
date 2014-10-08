@@ -16,8 +16,11 @@ var person_name,
     photo_url,
     orgs;
 
+var repotemp= $('#repositories').html();
 
-repos.forEach(function(repo){
+var render = _.template(repotemp);
+
+var test = repos.forEach(function(repo){
 
   //console.log(repo.name);
 
@@ -43,7 +46,7 @@ repos.forEach(function(repo){
 
   username = repo.owner.login;
 
-
+  $('.repo_body').append(render(repo))
 
 })
 

@@ -24,8 +24,47 @@
   </head>
   <body>
 
+    <div class = 'repo_body'></div>
 
-    </div>
+
+    <script id='repositories' type='text/template'>
+
+    <li>
+      <div class = 'repository'>
+        <li> <% repo_title %> </li>
+        <li> <% repo_update %> </li>
+        <li> <% repo_desc %> </li>
+        <li> <% repo_url %> </li>
+        <li> <% repo_lang %> </li>
+        <li> <% repo_star %> </li>
+        <li> <% repo_fork %> </li>
+    </li>
+
+    </script>
+
+    <script id='infosheet' type='text/template'>
+
+    <li>
+      The metro system in  <%= city %> is run by <%= location %>.
+    </li>
+
+    </script>
+
+    <script id='following' type='text/template'>
+
+    <li>
+      The metro system in  <%= city %> is run by <%= location %>.
+    </li>
+
+    </script>
+
+    <script id='organization' type='text/template'>
+
+    <li>
+      The metro system in  <%= city %> is run by <%= location %>.
+    </li>
+
+    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
