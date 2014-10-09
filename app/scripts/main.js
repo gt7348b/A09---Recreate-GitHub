@@ -29,11 +29,11 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
 
 var render = _.template(template_repo);
 
-//.getJSON('repo').done()
+$.getJSON(api_repo).done( function(repo_data){
 
-          var test = repos.forEach(function(repo){
+          repo_data.forEach(function(repo){
 
-            //console.log(repo.name);
+            console.log(repo.name);
 
             repo_title = repo.name;
 
@@ -60,6 +60,7 @@ var render = _.template(template_repo);
           //  $('.repo_body').append(render(repo))
 
           })
+        })
 
   username = userinfo.login;
 
