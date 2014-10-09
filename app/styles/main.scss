@@ -69,6 +69,10 @@ section{
 
   aside{
     @include span-columns(3);
+
+    .about{
+      width: 200px;
+    }
   }
 
   article {

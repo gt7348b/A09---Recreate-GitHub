@@ -76,12 +76,12 @@
           </ul>
 
           <ul class='about'>
-              <li>
-                location
+          <!--    <li>
+                <span class="octicon octicon-location"></span>loc
               </li>
               <li>
-                join
-              </li>
+                <span class="octicon octicon-clock"></span>join
+              </li> -->
           </ul>
 
           <ul class='follow'>
@@ -240,6 +240,18 @@
         <li><%= loc %></li>
       </ul>
 
+    </script>
+
+    <script id='about' type='text/template'>
+          <li>
+            <span class="octicon octicon-location"></span><p><% loc %></p>
+          </li>
+          <li>
+            <span class="octicon octicon-clock"></span>
+          </li>
+          <li>
+            <p><% join %></p>
+          </li>
     </script>
 
     <script id='following' type='text/template'>

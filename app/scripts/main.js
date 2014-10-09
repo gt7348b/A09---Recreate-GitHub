@@ -5,10 +5,12 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     api_user = 'https://api.github.com/users/gt7348b',
     api_org = 'https://api.github.com/users/gt7348b/orgs',
     api_starred = 'https://api.github.com/users/gt7348b/starred',
+    render_about,
     render_org,
     render_repo,
     render_starred,
     render_photo,
+    template_about = $('#about').html(),
     template_repo = $('#repositories').html(),
     template_photo = $('#sideid').html(),
     template_header,
@@ -29,9 +31,15 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     photo_url,
     orgs;
 
-    render_repo = _.template(template_repo);
+    render_about = _.template(template_about);
 
     render_photo = _.template(template_photo);
+
+    render_repo = _.template(template_repo);
+
+
+
+
 
 $.getJSON(api_repo).done( function(repo_data){
 
@@ -81,5 +89,7 @@ $.getJSON(api_user).done( function(user_data){
   join = user_data.created_at;
 
   $('.photo').append(render_photo(user_data));
+
+  $('.about').append(render_about(user_data));
 
 });
