@@ -1,7 +1,15 @@
 console.log('The Iron Yard Rocks');
 
 
-var person_name,
+var api_repo,
+    api_user,
+    api_star,
+    template_repo,
+    template_photo,
+    template_header,
+    template_org,
+    template_follow,
+    person_name,
     username,
     loc,
     join,
@@ -16,39 +24,40 @@ var person_name,
     photo_url,
     orgs;
 
-var repotemp= $('#repositories').html();
+//.getJSON('repo').done()
+          var repotemp= $('#repositories').html();
 
-var render = _.template(repotemp);
+          var render = _.template(repotemp);
 
-var test = repos.forEach(function(repo){
+          var test = repos.forEach(function(repo){
 
-  //console.log(repo.name);
+            //console.log(repo.name);
 
-  repo_title = repo.name;
+            repo_title = repo.name;
 
-  //console.log(repo.updated_at);
+            //console.log(repo.updated_at);
 
-  //console.log(repo.description);
+            //console.log(repo.description);
 
-  repo_desc = repo.description;
+            repo_desc = repo.description;
 
-  //console.log(repo.svn_url);
+            //console.log(repo.svn_url);
 
-  repo_url = repo.svn_url;
+            repo_url = repo.svn_url;
 
-  //console.log(repo.language);
+            //console.log(repo.language);
 
-  repo_lang = repo.language;
+            repo_lang = repo.language;
 
-  repo_star = repo.stargazers_count;
+            repo_star = repo.stargazers_count;
 
-  repo_fork = repo.forks_count;
+            repo_fork = repo.forks_count;
 
-  username = repo.owner.login;
+            username = repo.owner.login;
 
-//  $('.repo_body').append(render(repo))
+          //  $('.repo_body').append(render(repo))
 
-})
+          })
 
   username = userinfo.login;
 
