@@ -1,9 +1,10 @@
 console.log('The Iron Yard Rocks');
 
 
-var api_repo,
-    api_user,
-    api_star,
+var api_repo = 'https://api.github.com/users/gt7348b/repos',
+    api_user = 'https://api.github.com/users/gt7348b',
+    api_org = 'https://api.github.com/users/gt7348b/orgs',
+    api_starred = 'https://api.github.com/users/gt7348b/starred',
     template_repo,
     template_photo,
     template_header,
@@ -24,10 +25,11 @@ var api_repo,
     photo_url,
     orgs;
 
-//.getJSON('repo').done()
-          var repotemp= $('#repositories').html();
+    template_repo = $('#repositories').html();
 
-          var render = _.template(repotemp);
+var render = _.template(template_repo);
+
+//.getJSON('repo').done()
 
           var test = repos.forEach(function(repo){
 
