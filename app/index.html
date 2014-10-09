@@ -41,8 +41,9 @@
                   </li>
                 </ul>
               </ul>
+
               <ul class="HeaderRight">
-                <ul>
+                <!-- <ul>
                   <li> avatar image
                   </li>
                   <li>username
@@ -55,7 +56,7 @@
                   </li>
                   <li><span class="octicon octicon-sign-out"></span>
                   </li>
-                </ul>
+                </ul> -->
               </ul>
 
     </div>
@@ -237,20 +238,20 @@
       <img src=" <%= photo %> " style="width: 150px"/>
       <ul>
         <li><%= person_name %></li>
-        <li><%= loc %></li>
+        <li><%= username %></li>
       </ul>
 
     </script>
 
     <script id='about' type='text/template'>
           <li>
-            <span class="octicon octicon-location"></span><p><% loc %></p>
+            <span class="octicon octicon-location"></span><p><%= loc %></p>
           </li>
           <li>
             <span class="octicon octicon-clock"></span>
           </li>
           <li>
-            <p><% join %></p>
+            <p><%= join %></p>
           </li>
     </script>
 
@@ -270,6 +271,25 @@
 
     </script>
 
+    <script id='header_right' type='text/template'>
+
+    <ul>
+      <li> <img src=" <%= photo %> " style="width: 15px"/>
+      </li>
+      <li> <%= username %>
+      </li>
+      <li><span class="octicon octicon-plus"></span>
+      </li>
+      <li><span class="octicon octicon-inbox"></span>
+      </li>
+      <li><span class="octicon octicon-gear"></span>
+      </li>
+      <li><span class="octicon octicon-sign-out"></span>
+      </li>
+    </ul>
+
+    </script>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -283,7 +303,7 @@
         <!-- build:js scripts/main.js -->
         <script src="scripts/org.js"></script>
         <!-- <script src="scripts/repos.js"></script> -->
-        <script src="scripts/starred.js"></script>
+        <!--<script src="scripts/starred.js"></script> -->
         <!--<script src="scripts/user.js"></script> -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
