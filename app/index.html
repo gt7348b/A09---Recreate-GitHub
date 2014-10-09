@@ -99,6 +99,8 @@
 
           <ul class='org'>
             Organizations
+            <ul class='org_img'>
+            </ul>
           </ul>
 
         </aside>
@@ -266,8 +268,6 @@
           </li>
           <li>
             <span class="octicon octicon-clock"></span>
-          </li>
-          <li>
             <p><%= join %></p>
           </li>
     </script>
@@ -282,9 +282,7 @@
 
     <script id='organization' type='text/template'>
 
-    <li>
-      The metro system in  <%= city %> is run by <%= location %>.
-    </li>
+    <img src=" <%= orgs %> " style="width: 25px"/>
 
     </script>
 
