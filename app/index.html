@@ -64,15 +64,15 @@
 
         <aside class = 'sidebar'>
 
-          <ul class='id'>
-            <li class='profileimg'>
+          <ul class='photo'>
+<!--            <li class='profileimg'>
             </li>
             <li>
               <h1>John Crocker</h1>
             </li>
             <li>
               <h3>gt7348b</h3>
-            </li>
+            </li> -->
           </ul>
 
           <ul class='about'>
@@ -232,11 +232,13 @@
 
     </script>
 
-    <script id='infosheet' type='text/template'>
+    <script id='sideid' type='text/template'>
 
-    <li>
-      The metro system in  <%= city %> is run by <%= location %>.
-    </li>
+      <img src=" <%= photo %> " style="width: 150px"/>
+      <ul>
+        <li><%= person_name %></li>
+        <li><%= loc %></li>
+      </ul>
 
     </script>
 
@@ -264,13 +266,13 @@
     <!-- endbuild -->
 
 
-    <script src='scripts/token.js'></script>
+        <script src='scripts/token.js'></script>
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/org.js"></script>
         <!-- <script src="scripts/repos.js"></script> -->
         <script src="scripts/starred.js"></script>
-        <script src="scripts/user.js"></script>
+        <!--<script src="scripts/user.js"></script> -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
