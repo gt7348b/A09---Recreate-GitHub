@@ -69,13 +69,30 @@ section{
 
   aside{
     @include span-columns(3);
+    background-color: none;
 
     .photo {
       padding-left: 0px;
 
-      li {
-        display: block;
+      img {
+        border-radius: 10px;
       }
+
+      ul {
+        padding-left: 0px;
+      }
+
+      li.idname {
+          display: block;
+          font-size: 20px;
+          font-weight: bold;
+          }
+
+      li.username {
+          font-size: 14px;
+          color: $color3;
+        }
+
     }
 
     .about{
@@ -115,22 +132,24 @@ section{
 
     }
 
-    .repositories{
+    .repo_body{
       background-color: $color3;
       display: inline-block;
-      width: 400px;
+      @include outer-container;
 
       //This is the left side of the repo
 
       .repoleft {
-        float: left;
+          @include span-columns(9);
+          float: left;
 
         ul li {
           display: block;
         }
 
 
-        h2 {
+        li.repotitle {
+          display: block;
           color: $color4;
         }
 
@@ -146,6 +165,7 @@ section{
       //This is the right side of the repo
 
       .reporight {
+          @include span-columns(3);
           float: right;
           color: $color2;
 
