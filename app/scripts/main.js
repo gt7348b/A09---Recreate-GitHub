@@ -10,17 +10,19 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     template_photo = $('#sideid').html(),
     template_header = $('#header_right').html(),
     template_org = $('#organization').html(),
-    template_follow,
+    template_follow = $('#following').html(),
     render_about,
     render_header,
     render_org,
     render_photo,
     render_repo,
-    render_starred,
+    render_follow,
     person_name,
     username,
     loc,
     join,
+    fers,
+    flowing,
     repo_title,
     repo_update,
     repo_desc,
@@ -33,6 +35,8 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     orgs;
 
     render_about = _.template(template_about);
+
+    render_follow = _.template(template_follow);
 
     render_header = _.template(template_header);
 
@@ -104,9 +108,15 @@ $.getJSON(api_user).done( function(user_data){
 
   join = user_data.created_at;
 
+  fers = user_data.followers;
+
+  flowing = user_data.following;
+
   $('.photo').append(render_photo(user_data));
 
   $('.about').append(render_about(user_data));
 
   $('.HeaderRight').append(render_header(user_data));
+
+  $('.follow').append(render_follow(user_data));
 });
