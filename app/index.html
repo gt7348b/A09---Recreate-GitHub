@@ -221,13 +221,13 @@
 
     <li>
       <div class = 'repository'>
-        <li> <% repo_title %> </li>
-        <li> <% repo_update %> </li>
-        <li> <% repo_desc %> </li>
-        <li> <% repo_url %> </li>
-        <li> <% repo_lang %> </li>
-        <li> <% repo_star %> </li>
-        <li> <% repo_fork %> </li>
+        <li> <%= repo_title %> </li>
+        <li> <%= repo_update %> </li>
+        <li> <%= repo_desc %> </li>
+        <li> <%= repo_url %> </li>
+        <li> <%= repo_lang %> </li>
+        <li> <%= repo_star %> </li>
+        <li> <%= repo_fork %> </li>
     </li>
 
     </script>
@@ -262,6 +262,9 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+
+    <script src='scripts/token.js'></script>
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/org.js"></script>
