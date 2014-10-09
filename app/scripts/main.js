@@ -48,7 +48,7 @@ $.getJSON(api_repo).done( function(repo_data){
 
           repo_data.forEach(function(repo){
 
-            console.log(repo.name);
+            //console.log(repo.name);
 
             repo_title = repo.name;
 
@@ -70,9 +70,11 @@ $.getJSON(api_repo).done( function(repo_data){
 
             repo_fork = repo.forks_count;
 
+            repo_update = repo.updated_at;
+
             username = repo.owner.login;
 
-          //  $('.repo_body').append(render(repo))
+            $('.repo_body').append(render_repo(repo))
 
           })
         });
