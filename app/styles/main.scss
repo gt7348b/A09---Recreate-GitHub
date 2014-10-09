@@ -70,8 +70,28 @@ section{
   aside{
     @include span-columns(3);
 
+    .photo {
+      padding-left: 0px;
+
+      li {
+        display: block;
+      }
+    }
+
     .about{
       width: 200px;
+      padding-left: 0px;
+    }
+
+    .follow {
+      text-size: 10px;
+      color: $color3;
+      padding-left: 0px;
+
+      .num{
+        color: $color4;
+        text-align: center;
+      }
     }
   }
 
@@ -98,11 +118,16 @@ section{
     .repositories{
       background-color: $color3;
       display: inline-block;
+      width: 400px;
 
       //This is the left side of the repo
 
       .repoleft {
         float: left;
+
+        ul li {
+          display: block;
+        }
 
 
         h2 {

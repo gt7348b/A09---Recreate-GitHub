@@ -11,6 +11,7 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     template_header = $('#header_right').html(),
     template_org = $('#organization').html(),
     template_follow = $('#following').html(),
+    current_time = Date.now(),
     render_about,
     render_header,
     render_org,
@@ -21,6 +22,7 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     username,
     loc,
     join,
+    join_day,
     fers,
     flowing,
     repo_title,
@@ -32,7 +34,12 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     repo_lang,
     repo_fork,
     photo_url,
-    orgs;
+    orgs,
+    date,
+    day,
+    year,
+    month,
+    dateStr;
 
     render_about = _.template(template_about);
 
@@ -107,6 +114,16 @@ $.getJSON(api_user).done( function(user_data){
   loc = user_data.location;
 
   join = user_data.created_at;
+
+  date = new Date(join);
+  day = date.getDate();
+  year = date.getFullYear();
+  month = date.getMonth()+1;
+
+  //month_text
+
+  dateStr = month+" "+day+" "+year;
+console.log(dateStr);
 
   fers = user_data.followers;
 
