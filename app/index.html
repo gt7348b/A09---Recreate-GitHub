@@ -143,21 +143,21 @@
                 </ul>
               </div>
             </div>
-
-            <div class='repo_item'>
-              <div class= 'repoleft'>
-                  <li><h2>Main Title<h2></li>
-                    <li><p>description</p></li>
-                    <li><h3>Updated 6 days ago</h3></li>
-              </div>
-              <div class='reporight'>
-                  <li>language</li>
-                  <li>star 0</li>
-                  <li>fork 0</li>
+            <div class='repo_body'>
+              <div class='repo_item'>
+                <div class= 'repoleft'>
+                    <li><h2>Main Title<h2></li>
+                      <li><p>description</p></li>
+                      <li><h3>Updated 6 days ago</h3></li>
+                </div>
+                <div class='reporight'>
+                    <li>language</li>
+                    <li>star 0</li>
+                    <li>fork 0</li>
+                </div>
               </div>
             </div>
           </div>
-
         </article>
 
     </section>
@@ -210,30 +210,18 @@
     </div>
 
     <script id='repositories' type='text/template'>
-          <li>
-            <ul class='leftrepo'>
-              <li><h2> <%= repo_title %> </h2>
-              </li>
-              <li>
-                <p> <%= repo_desc %></p>
-              </li>
-              <li>
-                <p> <%= repo_update %> </p>
-              </li>
-            </ul>
-
-            <ul class='rightrepo'>
-              <li>
-                <%= repo_lang %>
-              </li>
-              <li>
-                <span class="octicon octicon-star"></span><%= repo_star %>
-              </li>
-              <li>
-                <span class="octicon octicon-git-branch"></span><%= repo_fork %>
-              </li>
-            </ul>
-          </li>
+          <div class='repo_item'>
+            <div class= 'repoleft'>
+                <li><h2><%= repo_title %><h2></li>
+                  <li><p><%= repo_desc %></p></li>
+                  <li><h3><%= repo_update %></h3></li>
+            </div>
+            <div class='reporight'>
+                <li><%= repo_lang %></li>
+                <li><span class="octicon octicon-star"></span><%= repo_star %></li>
+                <li><span class="octicon octicon-git-branch"></span><%= repo_fork %></li>
+            </div>
+          </div>
 
     </script>
 
