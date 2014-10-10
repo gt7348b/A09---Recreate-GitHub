@@ -20,8 +20,8 @@ $color7:  #dddddd;
 }
 
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
    ul {
@@ -41,24 +41,40 @@ body {
 
 .header {
   background-color: $color1;
+  margin: 0px auto;
+  height: 48px;
   text-align: center;
 
-  .header_left{
+  .header_left {
     float: left;
+    display: inline-block;
     position: relative;
-    top: 10px;
-    left: 10px;
     color: $color2;
     font-weight: bold;
+    font-height: 10px;
 
+    ul {
+      margin-top:10px;
+      margin-bottom: 12px;
+    }
   }
 
   .header_right{
     float: right;
     position: relative;
-    top: 10px;
-    right: 10px;
+    display: inline-block;
+    font-weight: bold;
+    padding-right:80px;
 
+    ul {
+      margin-top:10px;
+      margin-bottom: 12px;
+    }
+
+    li{
+      font-height: 10px;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -114,7 +130,7 @@ section{
 
   article {
     @include span-columns(9);
-    background-color: $color3;
+
 
     .midbox {
 
@@ -125,6 +141,7 @@ section{
       }
 
       .midright {
+
         button{
           @include button(shiny, $color5);
         }
@@ -143,17 +160,19 @@ section{
           @include span-columns(9);
           float: left;
 
-        ul li {
+        li {
           display: block;
         }
 
 
         li.repotitle {
-          display: block;
+          font-size: 24px;
+          font-weight: bold;
           color: $color4;
         }
 
-        .repodesc {
+        li.repodesc {
+          font-size: 24px;
           color: $color2;
         }
 

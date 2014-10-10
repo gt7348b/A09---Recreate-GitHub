@@ -133,7 +133,7 @@ console.log(dateStr);
 
   $('.about').append(render_about(user_data));
 
-  $('.HeaderRight').append(render_header(user_data));
+  //$('.HeaderRight').append(render_header(user_data));
 
   $('.follow').append(render_follow(user_data));
 });

@@ -25,7 +25,7 @@
   <body>
     <div class = 'header'>
 
-              <ul class="HeaderLeft">
+              <div class="header_left">
                 <ul>
                   <li> <span class="octicon octicon-mark-github"></span>
                   </li>
@@ -40,11 +40,11 @@
                   <li>Help
                   </li>
                 </ul>
-              </ul>
+              </div>
 
-              <ul class="HeaderRight">
-                <!-- <ul>
-                  <li> avatar image
+              <div class="header_right">
+                <ul>
+                  avatar image
                   </li>
                   <li>username
                   </li>
@@ -56,8 +56,8 @@
                   </li>
                   <li><span class="octicon octicon-sign-out"></span>
                   </li>
-                </ul> -->
-              </ul>
+                </ul>
+              </div>
 
     </div>
 
@@ -117,7 +117,7 @@
               <button type='button'>Search</button>
             </ul>
 
-            <ul class='midright'>
+            <div class='midright'>
               <ul>
                 <li class='All'>
                   All
@@ -139,7 +139,7 @@
                 </li>
                 <button type='button'>New</button>
               </ul>
-            </ul>
+            </div>
 
 
           </div>
@@ -295,8 +295,8 @@
 
     <script id='header_right' type='text/template'>
 
-    <ul>
-      <li> <img src=" <%= photo %> " style="width: 15px"/>
+
+      <li> <img src=" <%= photo %> " style="width: 20px"/>
       </li>
       <li> <%= username %>
       </li>
@@ -308,7 +308,7 @@
       </li>
       <li><span class="octicon octicon-sign-out"></span>
       </li>
-    </ul>
+
 
     </script>
 
