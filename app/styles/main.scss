@@ -15,9 +15,9 @@ $color7:  #dddddd;
 
 // Custom Styles
 
-* {
+/* {
   border: 1px solid $color7;
-}
+} */
 
 body {
 
@@ -79,10 +79,10 @@ body {
 
 //This is the formating for the main body
 
-section{
+section {
   @include outer-container;
 
-  aside{
+  aside {
     @include span-columns(3);
     background-color: none;
 
