@@ -15,9 +15,9 @@ $color7:  #dddddd;
 
 // Custom Styles
 
-/* {
+* {
   border: 1px solid $color7;
-} */
+}
 
 body {
 
@@ -45,6 +45,7 @@ body {
   text-align: center;
 
   .header_left {
+    @include padding (null null null 100px);
     float: left;
     display: inline-block;
     position: relative;
@@ -59,11 +60,11 @@ body {
   }
 
   .header_right{
+    @include padding (10px 80px null null);
     float: right;
     position: relative;
     display: inline-block;
     font-weight: bold;
-    padding-right:80px;
     height: 48px;
 
     div {
@@ -85,6 +86,7 @@ section {
   aside {
     @include span-columns(3);
     background-color: none;
+    @include padding (null null null 75px);
 
     .photo {
       padding-left: 0px;
@@ -101,18 +103,19 @@ section {
           display: block;
           font-size: 20px;
           font-weight: bold;
+
           }
 
       li.username {
           font-size: 14px;
-          color: $color3;
+          color: $color2;
         }
 
     }
 
     .about{
-      width: 200px;
       padding-left: 0px;
+      display: inline-block;
     }
 
     .follow {

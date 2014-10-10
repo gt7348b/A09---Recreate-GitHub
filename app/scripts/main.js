@@ -112,7 +112,7 @@ $.getJSON(api_repo).done( function(repo_data){
             // console.log('updated above push below')
             // console.log(repo.pushed_at);
 
-            repo_update = jQuery.timeago(new Date(repo.pushed_at));
+            repo_update = $.timeago(new Date(repo.pushed_at));
 
             username = repo.owner.login;
 
