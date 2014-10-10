@@ -170,6 +170,8 @@ section {
 
         .midbox {
            height: 50px;
+           @include border-width (null null 1px null);
+           @include border-color (null null $color7 null);
 
             .midleft {
               float: left;
@@ -183,7 +185,9 @@ section {
 
               li{display: inline-block;}
 
-                button{@include button(shiny, #62b246);}
+                button{
+                  @include button(shiny, #62b246);
+                  color: white;}
             }
         }
 
@@ -191,6 +195,7 @@ section {
 
             .repo_item{
               @include border-width(null null 1em null);
+              @include border-color (null null $color7 null);
               height: 100px;
 
               .repoleft {
@@ -201,7 +206,7 @@ section {
                   @include margin(0px 0px 0px 0px);
 
                   h2 {
-                    font-size: 16px;
+                    font-size: 24px;
                     color: $color4;
                     font-weight: bold;
                     @include margin(0px 0px 0px 0px);
