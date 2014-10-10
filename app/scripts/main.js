@@ -108,7 +108,11 @@ $.getJSON(api_repo).done( function(repo_data){
 
             repo_fork = repo.forks_count;
 
-            repo_update = repo.updated_at;
+            // console.log(repo.updated_at);
+            // console.log('updated above push below')
+            // console.log(repo.pushed_at);
+
+            repo_update = jQuery.timeago(new Date(repo.pushed_at));
 
             username = repo.owner.login;
 
