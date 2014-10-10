@@ -149,7 +149,7 @@ console.log(dateStr);
 
   $('.about').append(render_about(user_data));
 
-  //$('.HeaderRight').append(render_header(user_data));
+  $('.header_right').append(render_header(user_data));
 
   $('.flow').append(render_following(user_data));
 

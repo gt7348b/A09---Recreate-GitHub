@@ -26,7 +26,7 @@
     <div class = 'header'>
 
               <div class="header_left">
-                <ul>
+                <div>
                   <li> <span class="octicon octicon-mark-github"></span>
                   </li>
                   <li><input type"search" value='Search GitHub'/>
@@ -39,12 +39,12 @@
                   </li>
                   <li>Help
                   </li>
-                </ul>
+                </div>
               </div>
 
               <div class="header_right">
-                <ul>
-                  avatar image
+
+                <!-- avatar image
                   </li>
                   <li>username
                   </li>
@@ -55,8 +55,8 @@
                   <li><span class="octicon octicon-gear"></span>
                   </li>
                   <li><span class="octicon octicon-sign-out"></span>
-                  </li>
-                </ul>
+                  </li>-->
+
               </div>
 
     </div>
@@ -248,7 +248,7 @@
 
     <script id='header_right' type='text/template'>
 
-
+      <div>
       <li> <img src=" <%= photo %> " style="width: 20px"/>
       </li>
       <li> <%= username %>
@@ -261,7 +261,7 @@
       </li>
       <li><span class="octicon octicon-sign-out"></span>
       </li>
-
+      </div>
 
     </script>
 
