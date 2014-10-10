@@ -15,9 +15,9 @@ $color7:  #dddddd;
 
 // Custom Styles
 
-* {
+/* {
   border: 1px solid $color7;
-}
+} */
 
 body {
 
@@ -45,13 +45,13 @@ body {
   text-align: center;
 
   .header_left {
-    @include padding (null null null 100px);
+    @include padding (5px null null 100px);
     float: left;
     display: inline-block;
     position: relative;
     color: $color2;
     font-weight: bold;
-    font-height: 10px;
+    font-height: 8px;
 
     ul {
       margin-top:10px;
@@ -141,7 +141,7 @@ section {
           display: inline-block;
           padding: 0 20px;
           margin-right:1px; /* It specifies the distance between each tab */
-          background:#F7F7F7;
+          //background:#F7F7F7;
           color:Black;
           text-decoration:none;
           font: normal 12px Arial;
@@ -155,19 +155,20 @@ section {
 
       div.menu3 a:hover, div.menu3 a.current
       {
-          background:#E9ECF0;
+          //background:#E9ECF0;
           line-height: 34px;
           color:#000;
       }
 
       div.menu3sub
       {
-          border:1px solid #CAD0DB;
-          background:#E9ECF0;
+          //border:1px solid #CAD0DB;
+          //background:#E9ECF0;
 
         .midbox {
            height: 50px;
            @include border-width (null null 1px null);
+           @include border-style (null null solid null);
            @include border-color (null null $color7 null);
 
             .midleft {
@@ -199,7 +200,8 @@ section {
         .repo_body {
 
             .repo_item{
-              @include border-width(null null 1em null);
+              @include border-width (null null 1px null);
+              @include border-style (null null solid null);
               @include border-color (null null $color7 null);
               height: 100px;
 
@@ -208,7 +210,7 @@ section {
 
                 li{
                   display: block;
-                  @include margin(0px 0px 0px 0px);
+                  @include margin(10px 0px 10px 0px);
 
                   h2 {
                     font-size: 24px;
