@@ -120,7 +120,12 @@ section {
       .num{
         color: $color4;
         text-align: center;
+        text-size: 10px;
       }
+    }
+
+    .org {
+      font-weight: bold;
     }
   }
 
