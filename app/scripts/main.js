@@ -10,14 +10,18 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     template_photo = $('#sideid').html(),
     template_header = $('#header_right').html(),
     template_org = $('#organization').html(),
-    template_follow = $('#following').html(),
+    template_following = $('#following').html(),
+    template_followers = $('#followers').html(),
+    template_starred = $('#starred').html(),
     current_time = Date.now(),
     render_about,
     render_header,
     render_org,
     render_photo,
     render_repo,
-    render_follow,
+    render_following,
+    render_follwers,
+    render_starred,
     person_name,
     username,
     loc,
@@ -39,11 +43,16 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     day,
     year,
     month,
-    dateStr;
+    dateStr,
+    stars;
 
     render_about = _.template(template_about);
 
-    render_follow = _.template(template_follow);
+    render_following = _.template(template_following);
+
+    render_followers = _.template(template_followers);
+
+    render_starred = _.template(template_starred);
 
     render_header = _.template(template_header);
 
@@ -64,6 +73,13 @@ $.getJSON(api_org).done( function(org_data){
           })
         });
 
+$.getJSON(api_starred).done( function(star_data){
+
+            stars = star_data.length;
+
+            $('.star').append(render_starred(star_data));
+
+        });
 
 
 $.getJSON(api_repo).done( function(repo_data){
@@ -135,5 +151,7 @@ console.log(dateStr);
 
   //$('.HeaderRight').append(render_header(user_data));
 
-  $('.follow').append(render_follow(user_data));
+  $('.flow').append(render_following(user_data));
+
+  $('.flowers').append(render_followers(user_data));
 });
