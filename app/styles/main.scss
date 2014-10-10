@@ -25,7 +25,8 @@ body {
 
 
    ul {
-    display: inline-block;
+     padding-left: 0px;
+  //  display: inline-block;
   //  vertical-align: middle;
     }
 
@@ -131,7 +132,6 @@ section{
   article {
     @include span-columns(9);
 
-
     .midbox {
 
       .midleft {
@@ -150,47 +150,42 @@ section{
     }
 
     .repo_body{
-      background-color: $color3;
-      display: inline-block;
-      @include outer-container;
+
+      .repo_item{
+        @include outer-container;
+        background-color: $color1;
+        margin: 0px auto;
+        height: 100px;
+        width: 730px;
+        text-align: center;
 
       //This is the left side of the repo
 
       .repoleft {
-          @include span-columns(9);
-          float: left;
-
-        li {
-          display: block;
-        }
-
-
-        li.repotitle {
-          font-size: 24px;
+          @include span-columns(6);
+          //float: left;
+          display: inline-block;
+          position: relative;
+          color: $color2;
           font-weight: bold;
-          color: $color4;
+          font-height: 10px;
         }
 
-        li.repodesc {
-          font-size: 24px;
-          color: $color2;
-        }
-
-        .reposubmit {
-          color: $color2;
-        }
-      }
 
       //This is the right side of the repo
 
       .reporight {
-          @include span-columns(3);
-          float: right;
+          @include span-columns(6);
+          //float: right;
+          display: inline-block;
+          position: relative;
           color: $color2;
-
+          font-weight: bold;
+          font-height: 10px;
 
 
       }
+    }
     }
   }
 }
