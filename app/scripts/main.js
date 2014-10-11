@@ -44,7 +44,8 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     year,
     month,
     dateStr,
-    stars;
+    stars,
+    link;
 
     render_about = _.template(template_about);
 
@@ -116,7 +117,11 @@ $.getJSON(api_repo).done( function(repo_data){
 
             username = repo.owner.login;
 
-            $('.repo_body').append(render_repo(repo))
+            // console.log(repo.html_url);
+
+            link = repo.html_url;
+
+            $('.repo_body').append(render_repo(repo));
 
           })
         });

@@ -27,36 +27,16 @@
 
               <div class="header_left">
                 <div>
-                  <li> <span class="mega-octicon octicon-mark-github"></span></span>
-                  </li>
-                  <li><input type"search" value='Search GitHub'/>
-                  </li>
-                  <li>Explore
-                  </li>
-                  <li>Gist
-                  </li>
-                  <li>Blog
-                  </li>
-                  <li>Help
-                  </li>
+                  <li> <span class="mega-octicon octicon-mark-github"></span></span></li>
+                  <li><input type"search" value='Search GitHub'/></li>
+                  <li>Explore</li>
+                  <li>Gist</li>
+                  <li>Blog</li>
+                  <li>Help</li>
                 </div>
               </div>
 
               <div class="header_right">
-
-                <!-- avatar image
-                  </li>
-                  <li>username
-                  </li>
-                  <li><span class="octicon octicon-plus"></span>
-                  </li>
-                  <li><span class="octicon octicon-inbox"></span>
-                  </li>
-                  <li><span class="octicon octicon-gear"></span>
-                  </li>
-                  <li><span class="octicon octicon-sign-out"></span>
-                  </li>-->
-
               </div>
 
     </div>
@@ -75,7 +55,6 @@
             <li class='flowers'></li>
             <li class='star'></li>
             <li class='flow'></li>
-
           </ul>
 
           <div class='org'>
@@ -88,9 +67,9 @@
 
         <article class = 'reposide'>
           <div class="menu3">
-              <a href="#1"><span class="octicon octicon-diff-added"></span>Contributions</a>
-              <a href="#2" class="current"><span class="octicon octicon-repo"></span>Repositories</a>
-              <a href="#3"><span class="octicon octicon-rss"></span>Public Activities</a>
+              <a href="#1"><span class="octicon octicon-diff-added"></span> Contributions</a>
+              <a href="#2" class="current"><span class="octicon octicon-repo"></span> Repositories</a>
+              <a href="#3"><span class="octicon octicon-rss"></span> Public Activities</a>
 
           </div>
           <div class="menu3sub">
@@ -102,43 +81,18 @@
 
               <div class='midright'>
                 <ul>
-                  <li style='font-weight: bold; color: black'>
-                    All
-                  </li>
-                  <li>
-                    Public
-                  </li>
-                  <li>
-                    Private
-                  </li>
-                  <li>
-                    Sources
-                  </li>
-                  <li>
-                    Forks
-                  </li>
-                  <li>
-                    Mirrors
-                  </li>
-                  <button type='button'><span class="octicon octicon-repo"></span>New</button>
+                  <li style='font-weight: bold; color: black'>All</li>
+                  <li>Public</li>
+                  <li>Private</li>
+                  <li>Sources</li>
+                  <li>Forks</li>
+                  <li>Mirrors
+                  </li><button type='button'><span class="octicon octicon-repo"></span> New</button>
                 </ul>
               </div>
             </div>
             <div class='repo_body'>
-          <!--     <div class='repo_item'>
-                 <div class= 'repoleft'>
-                    <li><h2>Main Title<h2></li>
-                      <li><p>description</p></li>
-                      <li><h3>Updated 6 days ago</h3></li>
-                </div>
-                <div class='reporight'>
-                    <li>language</li>
-                    <li>star 0</li>
-                    <li>fork 0</li>
-                </div>
-              </div>-->
             </div>
-          </div>
         </article>
 
     </section>
@@ -147,53 +101,33 @@
 
       <div class='footleft'>
         <ul>
-          <li class='copy'>
-            C 2014 GitHub, Inc.
-          </li>
-          <li>
-            Terms
-          </li>
-          <li>
-            Privacy
-          </li>
-          <li>
-            Security
-          </li>
-          <li>
-            Contact
-          </li>
+          <li class='copy'>C 2014 GitHub, Inc.</li>
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Security</li>
+          <li>Contact</li>
         </ul>
 
         <div class='footright'>
           <ul>
-            <li>
-              Status
-            </li>
-            <li>
-              API
-            </li>
-            <li>
-              Training
-            </li>
-            <li>
-              Shop
-            </li>
-            <li>
-              Blog
-            </li>
-            <li>
-              About
-            </li>
+            <li>Status</li>
+            <li>API</li>
+            <li>Training</li>
+            <li>Shop</li>
+            <li>Blog</li>
+            <li>About</li>
           </ul>
 
           <span class="octicon octicon-mark-github"></span>
 
     </div>
 
+<!-- This is the repository script -->
+
     <script id='repositories' type='text/template'>
           <div class='repo_item'>
             <div class= 'repoleft'>
-                <li><h2><%= repo_title %><h2></li>
+                <li><h2><a href='<% link %>'><%= repo_title %></a></h2></li>
                   <li><p><%= repo_desc %></p></li>
                   <li><h3>Updated <%= repo_update %></h3></li>
             </div>
@@ -203,19 +137,18 @@
                 <li><span class="octicon octicon-git-branch"></span> <%= repo_fork %></li>
             </div>
           </div>
-
     </script>
 
+<!-- This is the Photo and ID script -->
     <script id='sideid' type='text/template'>
-
       <img src=" <%= photo %> " style="width: 150px"/>
       <ul>
         <li class='idname'><%= person_name %></li>
         <li class='username'><%= username %></li>
       </ul>
-
     </script>
 
+<!-- This is the about script -->
     <script id='about' type='text/template'>
           <li>
             <span class="octicon octicon-location"></span> <%= loc %>
@@ -225,43 +158,42 @@
           </li>
     </script>
 
+<!-- This is the followers script -->
     <script id='followers' type='text/template'>
             <div class="num"><%= fers %><div> Followers
     </script>
 
+<!-- This is the starred script -->
     <script id='starred' type='text/template'>
             <div class="num"><%= stars %><div>Starred
     </script>
 
+<!-- This is the following script -->
     <script id='following' type='type/template'>
             <div class="num"><%= flowing %><div>Following
     </script>
 
-    </script>
-
+<!-- This is the script that shows organizations -->
     <script id='organization' type='text/template'>
-
-    <img src=" <%= orgs %> " style="width: 25px"/>
-
+      <img src=" <%= orgs %> " style="width: 25px"/>
     </script>
 
+<!-- This is the header right script -->
     <script id='header_right' type='text/template'>
-
       <div>
-      <li> <img src=" <%= photo %> " style="width: 20px"/>
-      </li>
-      <li> <%= username %>
-      </li>
-      <li><span class="octicon octicon-plus"></span><span class="octicon octicon-triangle-down"></span>
-      </li>
-      <li><span class="octicon octicon-inbox"></span>
-      </li>
-      <li><span class="octicon octicon-gear"></span>
-      </li>
-      <li><span class="octicon octicon-sign-out"></span>
-      </li>
+        <li> <img src=" <%= photo %> " style="width: 20px"/>
+        </li>
+        <li> <%= username %>
+        </li>
+        <li><span class="octicon octicon-plus"></span><span class="octicon octicon-triangle-down"></span>
+        </li>
+        <li><span class="octicon octicon-inbox"></span>
+        </li>
+        <li><span class="octicon octicon-gear"></span>
+        </li>
+        <li><span class="octicon octicon-sign-out"></span>
+        </li>
       </div>
-
     </script>
 
     <!-- build:js scripts/vendor.js -->
@@ -271,16 +203,11 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-
         <script src='scripts/token.js'></script>
 
         <!-- build:js scripts/main.js -->
-        <!--<script src="scripts/org.js"></script> -->
-        <!-- <script src="scripts/repos.js"></script> -->
-        <!--<script src="scripts/starred.js"></script> -->
-        <!--<script src="scripts/user.js"></script> -->
         <script src='scripts/timeago.js'></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
