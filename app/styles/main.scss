@@ -172,12 +172,11 @@ body {
 
     button {
       border-radius: 10px;
-      background: $color3;
+      background: $color7;
     }
 
       div.menu3
       {
-          /*width:500px;margin:0 auto;*//*Uncomment this line to make the menu center-aligned.*/
           text-align:left;
           font-size:0;
           height:34px;
@@ -188,15 +187,13 @@ body {
       {
           display: inline-block;
           padding: 0 20px;
-          margin-right:1px; /* It specifies the distance between each tab */
           //background:#F7F7F7;
-          color:Black;
           text-decoration:none;
           font: normal 12px Arial;
           line-height: 34px;
           border:1px solid #CAD0DB;
           border-bottom:0;
-          color:#666;
+          //color:#666;
           vertical-align:top;/*ChangeSet#2*/
           text-decoration:none;
       }
@@ -219,6 +216,7 @@ body {
            @include border-style (null null solid null);
            @include border-color (null null $color7 null);
 
+
             .midleft {
               float: left;
 
@@ -237,6 +235,8 @@ body {
               li{
                 display: inline-block;
                 @include margin (null null null null);
+                font-size: 12px;
+                @include padding (null 7px null 7px);
                 }
 
                 button{
