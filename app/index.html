@@ -68,8 +68,8 @@
 
 
         <article class = 'reposide'>
-          <button class='edit_profile' type='button'><span class="octicon octicon-pencil"></span> Edit Profile</button>
-
+          <button class='edit_profile' type='button'>
+            <span class="octicon octicon-pencil"></span> Edit Profile</button>
 
           <div class="menu3">
               <a href="#1">
@@ -95,26 +95,28 @@
                   <li>Sources</li>
                   <li>Forks</li>
                   <li>Mirrors
-                  </li><button type='button'><span class="octicon octicon-repo"></span> New</button>
+                  </li><button type='button'>
+                    <span class="octicon octicon-repo"></span> New</button>
                 </ul>
               </div>
             </div>
+
             <div class='repo_body'>
             </div>
         </article>
-
     </section>
 
     <div class = 'footer'>
 
       <div class='footleft'>
         <ul>
-          <li class='copy'>C 2014 GitHub, Inc.</li>
+          <li class='copy'>&#xa9 2014 GitHub, Inc.</li>
           <li>Terms</li>
           <li>Privacy</li>
           <li>Security</li>
           <li>Contact</li>
         </ul>
+      </div>
 
         <div class='footright'>
           <ul>
@@ -125,6 +127,7 @@
             <li>Blog</li>
             <li>About</li>
           </ul>
+        </div>
 
           <span class="octicon octicon-mark-github"></span>
 
@@ -149,7 +152,8 @@
 
 <!-- This is the Photo and ID script -->
     <script id='sideid' type='text/template'>
-      <img src=" <%= photo %> " style="width: 230px"/>
+      <a href='https://github.com/settings/profile'>
+        <img src=" <%= photo %> " style="width: 230px"/></a>
       <ul>
         <li class='idname'><%= person_name %></li>
         <li class='username'><%= username %></li>
@@ -159,7 +163,7 @@
 <!-- This is the about script -->
     <script id='about' type='text/template'>
           <li>
-            <span class="octicon octicon-location"></span>  <%= loc %>
+            <span class="octicon octicon-location"></span> <%= loc %>
           </li>
           <li>
             <span class="octicon octicon-clock"></span> Joined on <%= dateStr %>
@@ -177,7 +181,7 @@
     </script>
 
 <!-- This is the following script -->
-    <script id='following' type='type/template'>
+    <script id='following' type='text/template'>
             <div class="num"><%= flowing %></div>Following
     </script>
 
@@ -195,7 +199,9 @@
         </li>
         <li><span class="octicon octicon-plus"></span><span class="octicon octicon-triangle-down"></span>
         </li>
-        <li><span class="octicon octicon-inbox"></span>
+        <li class='circle'><span class="octicon octicon-inbox"></span>
+            <div class='bluecircle'>
+            </div>
         </li>
         <li><span class="octicon octicon-gear"></span>
         </li>
