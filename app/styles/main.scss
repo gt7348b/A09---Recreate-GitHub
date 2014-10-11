@@ -322,6 +322,11 @@ body {
     float: left;
     position: relative;
     color: $color4;
+    font-size: 14px;
+
+    li {
+      @include padding(null 5px null 5px);
+    }
 
     .copy{
       color: $color6;
@@ -333,5 +338,10 @@ body {
     position: relative;
     color: $color4;
     @include padding(10px 90px 0px 0px);
+    font-size: 14px;
+
+    li {
+      @include padding(null 7px null 7px);
+    }
   }
 }
