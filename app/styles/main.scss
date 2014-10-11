@@ -49,9 +49,13 @@ body {
     float: left;
     display: inline-block;
     position: relative;
-    color: $color2;
-    font-weight: bold;
-    font-height: 8px;
+
+    li {
+      color: $color2;
+      font-weight: bold;
+      font-size: 11px;
+      @include padding (null 10px null 10px);
+    }
 
     ul {
       margin-top:10px;
