@@ -43,6 +43,7 @@ var api_repo = 'https://api.github.com/users/gt7348b/repos',
     day,
     year,
     month,
+    monthtxt,
     dateStr,
     stars,
     link;
@@ -145,9 +146,13 @@ $.getJSON(api_user).done( function(user_data){
   year = date.getFullYear();
   month = date.getMonth()+1;
 
-  //month_text
+  if (month === 9) {
+    monthtxt = "Sep";
+  } else {monthtxt = month;};
 
-  dateStr = month+" "+day+" "+year;
+  console.log (monthtxt);
+
+  dateStr = monthtxt+" "+day+" "+year;
 console.log(dateStr);
 
   fers = user_data.followers;

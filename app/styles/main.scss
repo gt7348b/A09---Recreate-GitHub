@@ -111,6 +111,11 @@ section {
     .about{
       padding-left: 0px;
       display: inline-block;
+
+      .octicon{
+        color: $color6;
+        @include margin (null 5px 5px null);
+      }
     }
 
     .follow {
