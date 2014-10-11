@@ -45,7 +45,7 @@ body {
   text-align: center;
 
   .header_left {
-    @include padding (5px null null 100px);
+    @include padding (5px null null 65px);
     float: left;
     display: inline-block;
     position: relative;
@@ -81,7 +81,7 @@ section {
   aside {
     @include span-columns(3);
     background-color: none;
-    @include padding (null null null 75px);
+    @include padding (null null null 30px);
 
     .photo {
       padding-left: 0px;
