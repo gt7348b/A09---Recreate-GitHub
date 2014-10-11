@@ -65,13 +65,21 @@
 
         </aside>
 
-        <article class = 'reposide'>
-          <div class="menu3">
-              <a href="#1"><span class="octicon octicon-diff-added"></span> Contributions</a>
-              <a href="#2" class="current"><span class="octicon octicon-repo"></span> Repositories</a>
-              <a href="#3"><span class="octicon octicon-rss"></span> Public Activities</a>
 
+
+        <article class = 'reposide'>
+          <button class='edit_profile' type='button'><span class="octicon octicon-pencil"></span> Edit Profile</button>
+
+
+          <div class="menu3">
+              <a href="#1">
+                <span class="octicon octicon-diff-added"></span> Contributions</a>
+              <a href="#2" class="current">
+                <span class="octicon octicon-repo"></span> Repositories</a>
+              <a href="#3">
+                <span class="octicon octicon-rss"></span> Public Activities</a>
           </div>
+
           <div class="menu3sub">
             <div class='midbox'>
               <div class='midleft'>
@@ -175,7 +183,7 @@
 
 <!-- This is the script that shows organizations -->
     <script id='organization' type='text/template'>
-      <img src=" <%= orgs %> " style="width: 25px"/>
+      <img src=" <%= orgs %> " style="width: 44px"/>
     </script>
 
 <!-- This is the header right script -->

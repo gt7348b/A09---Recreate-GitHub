@@ -144,6 +144,20 @@ section {
   article {
     @include span-columns(9);
 
+    .edit_profile{
+      position: absolute;
+      right: 40px;
+      height: 30px;
+      font-size: 10px;
+      font-weight: bold;
+      @include padding (5px 5px 5px 5px)
+    }
+
+    button {
+      border-radius: 10px;
+      background: $color3; 
+    }
+
       div.menu3
       {
           /*width:500px;margin:0 auto;*//*Uncomment this line to make the menu center-aligned.*/
