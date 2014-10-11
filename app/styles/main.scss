@@ -308,15 +308,26 @@ section {
 
 .footer {
   text-align: center;
-  color: $color4;
+  color: $color7;
+  background:$color1;
+  height:100px;
+  padding-top: 40px;
 
   .footleft{
+    @include padding(10px 0px 0px 90px);
     float: left;
     position: relative;
+    color: $color4;
+
+    .copy{
+      color: $color6;
+    }
   }
 
   .footright{
     float:right;
     position: relative;
+    color: $color4;
+    @include padding(10px 90px 0px 0px);
   }
 }
