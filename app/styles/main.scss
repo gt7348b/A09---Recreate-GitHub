@@ -315,7 +315,11 @@ body {
   color: $color7;
   background:$color1;
   height:100px;
-  padding-top: 40px;
+  vertical-align: center;
+
+  span{
+    @include padding(15px null null null);
+  }
 
   .footleft{
     @include padding(10px 0px 0px 90px);
