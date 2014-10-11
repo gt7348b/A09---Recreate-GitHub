@@ -87,11 +87,11 @@ body {
 
 //This is the formating for the main body
 
-section {
+.section_main_body {
   @include outer-container;
   @include margin (20px null null null);
 
-  aside {
+  .aside_sidebar {
     @include span-columns(3);
     background-color: none;
     @include padding (null null null 30px);
@@ -154,7 +154,7 @@ section {
     }
   }
 
-  article {
+  .article_reposide {
     @include span-columns(9);
 
     .edit_profile{

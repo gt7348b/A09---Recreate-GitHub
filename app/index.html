@@ -41,9 +41,9 @@
 
     </div>
 
-    <section class = 'main_body'>
+    <div class = 'section_main_body'>
 
-        <aside class = 'sidebar'>
+        <div class = 'aside_sidebar'>
 
           <ul class='photo'>
           </ul>
@@ -63,9 +63,9 @@
             </ul>
           </div>
 
-        </aside>
+        </div>
 
-        <article class = 'reposide'>
+        <div class = 'article_reposide'>
           <button class='edit_profile' type='button'>
             <span class="octicon octicon-pencil"></span> Edit Profile</button>
 
@@ -101,8 +101,9 @@
 
             <div class='repo_body'>
             </div>
-        </article>
-    </section>
+        </div>
+    </div>
+  </div>
 
     <div class = 'footer'>
 
@@ -134,7 +135,7 @@
     <script id='repositories' type='text/template'>
           <div class='repo_item'>
             <div class= 'repoleft'>
-                <li><h2><%= repo_title %></h2></li>
+                <li><h2><a href='<% link %>'><%= repo_title %></a></h2></li>
                   <li><p><%= repo_desc %></p></li>
                   <li><h3>Updated <%= repo_update %></h3></li>
             </div>
@@ -168,26 +169,24 @@
 
 
     <script id='followers' type='text/template'>
-            <div class="num"><%= fers %></div>Followers
+            <div class='num'><%= fers %></div>Followers
     </script>
-
 
     <script id='starred' type='text/template'>
-            <div class="num"><%= stars %></div>Starred
+            <div class='num'><%= stars %></div>Starred
     </script>
 
-
     <script id='following' type='text/template'>
-            <div class="num"><%= flowing %></div>Following
+            <div class='num'><%= flowing %></div>Following
     </script>
 
     <script id='organization' type='text/template'>
-      <img src=" <%= orgs %> " style="width: 44px"/>
+      <img src=' <%= orgs %> ' style='width: 44px'/>
     </script>
 
     <script id='header_right' type='text/template'>
       <div>
-        <li> <img src=" <%= photo %> " style="width: 20px"/>
+        <li> <img src=' <%= photo %> ' style='width: 20px'/>
         </li>
         <li> <%= username %>
         </li>
