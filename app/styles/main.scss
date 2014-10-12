@@ -78,9 +78,20 @@ body {
     display: inline-block;
     font-weight: bold;
 
+
     li{
-      font-height: 10px;
+      font-size: 12px;
       margin-left: 10px;
+      vertical-align: center;
+
+      a{
+        text-decoration: none;
+      }
+
+      a:hover{
+        text-decoration: underline;
+        color: $color4;
+      }
 
       .circle{
 
