@@ -287,7 +287,7 @@ body {
               @include border-width (null null 1px null);
               @include border-style (null null solid null);
               @include border-color (null null $color7 null);
-            
+              height: 110px;
               @include padding(35px 0px 35px 0px);
 
               .repoleft {
@@ -299,7 +299,7 @@ body {
 
 
                   h2 {
-                    font-size: 24px;
+                    font-size: 20px;
                     font-weight: bold;
                     @include margin(0px 0px 0px 0px);
 
@@ -316,7 +316,7 @@ body {
                   p{
                     font-size: 12px;
                     color: $color2;
-                    @include padding(20px 0px 20px 0px);
+
                   }
 
                   h3 {
