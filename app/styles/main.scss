@@ -55,6 +55,15 @@ body {
       font-weight: bold;
       font-size: 11px;
       @include padding (null 10px null 10px);
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: $color4;
+      }
     }
 
     ul {
