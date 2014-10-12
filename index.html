@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>A09</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <div class = 'header'>
+
+      <div class="header_left">
+        <div>
+          <li> <span class="mega-octicon octicon-mark-github"></span></li>
+          <li><input type"text" value='Search GitHub' style='color: $color7'/></li>
+          <li>Explore</li>
+          <li>Gist</li>
+          <li>Blog</li>
+          <li>Help</li>
+        </div>
+      </div>
+
+      <div class="header_right">
+      </div>
+
+    </div>
+
+    <div class = 'section_main_body'>
+
+        <div class = 'aside_sidebar'>
+
+          <ul class='photo'>
+          </ul>
+
+          <ul class='about'>
+          </ul>
+
+          <ul class='follow'>
+            <li class='flowers'></li>
+            <li class='star'></li>
+            <li class='flow'></li>
+          </ul>
+
+          <div class='org'>
+            Organizations
+            <ul class='org_img'>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class = 'article_reposide'>
+          <button class='edit_profile' type='button'>
+            <span class="octicon octicon-pencil"></span> Edit Profile</button>
+
+          <div class="menu3">
+              <a href="https://github.com/gt7348b">
+                <span class="octicon octicon-diff-added"></span> Contributions</a>
+              <a href="#https://github.com/gt7348b?tab=repositories" class="current">
+                <span class="octicon octicon-repo"></span> Repositories</a>
+              <a href="https://github.com/gt7348b?tab=activity">
+                <span class="octicon octicon-rss"></span> Public Activities</a>
+          </div>
+
+          <div class="menu3sub">
+            <div class='midbox'>
+              <div class='midleft'>
+                <input type='text' value ='Find a repository'/>
+                <button type='button'>Search</button>
+              </div>
+
+              <div class='midright'>
+                <ul>
+                  <li style='font-weight: bold; color: black'>All</li>
+                  <li>Public</li>
+                  <li>Private</li>
+                  <li>Sources</li>
+                  <li>Forks</li>
+                  <li>Mirrors</li>
+                  <li><button type='button'>
+                    <span class="octicon octicon-repo"></span> New</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class='repo_body'>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class = 'footer'>
+
+      <div class='footleft'>
+        <ul>
+          <li class='copy'>&#xa9; 2014 GitHub, Inc.</li>
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Security</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+        <div class='footright'>
+          <ul>
+            <li>Status</li>
+            <li>API</li>
+            <li>Training</li>
+            <li>Shop</li>
+            <li>Blog</li>
+            <li>About</li>
+          </ul>
+        </div>
+
+        <span class="mega-octicon octicon-mark-github"></span>
+    </div>
+
+
+    <script id='repositories' type='text/template'>
+          <div class='repo_item'>
+            <div class= 'repoleft'>
+                <li><h2><a href='<% link %>'><%= repo_title %></a></h2></li>
+                  <li><p><%= repo_desc %></p></li>
+                  <li><h3>Updated <%= repo_update %></h3></li>
+            </div>
+            <div class='reporight'>
+                <li class='language'><%= repo_lang %></li>
+                <li><span class="octicon octicon-star"></span> <%= repo_star %></li>
+                <li><span class="octicon octicon-git-branch"></span> <%= repo_fork %></li>
+            </div>
+          </div>
+    </script>
+
+
+    <script id='sideid' type='text/template'>
+      <a href='https://github.com/settings/profile'>
+        <img src=" <%= photo %> " style="width: 230px"/></a>
+      <ul>
+        <li class='idname'><%= person_name %></li>
+        <li class='username'><%= username %></li>
+      </ul>
+    </script>
+
+
+    <script id='about' type='text/template'>
+          <li>
+            <span class="octicon octicon-location"></span> <%= loc %>
+          </li>
+          <li>
+            <span class="octicon octicon-clock"></span> Joined on <%= dateStr %>
+          </li>
+    </script>
+
+
+    <script id='followers' type='text/template'>
+            <div class='num'><%= fers %></div>Followers
+    </script>
+
+    <script id='starred' type='text/template'>
+            <div class='num'><%= stars %></div>Starred
+    </script>
+
+    <script id='following' type='text/template'>
+            <div class='num'><%= flowing %></div>Following
+    </script>
+
+    <script id='organization' type='text/template'>
+      <img src=' <%= orgs %> ' style='width: 44px'/>
+    </script>
+
+    <script id='header_right' type='text/template'>
+      <div>
+        <li> <img src=' <%= photo %> ' style='width: 20px'/>
+        </li>
+        <li> <%= username %>
+        </li>
+        <li><span class="octicon octicon-plus"></span><span class="octicon octicon-triangle-down"></span>
+        </li>
+        <li class='circle'><span class="octicon octicon-inbox">
+          <div class='bluecircle'>
+          </div></span>
+        </li>
+        <li><span class="octicon octicon-gear"></span>
+        </li>
+        <li><span class="octicon octicon-sign-out"></span>
+        </li>
+      </div>
+    </script>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src='scripts/token.js'></script>
+
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
