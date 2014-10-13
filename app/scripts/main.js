@@ -142,6 +142,7 @@ $.getJSON(api_user).done( function(user_data){
   join = user_data.created_at;
 
   date = new Date(join);
+  console.log(date);
   day = date.getDate();
   year = date.getFullYear();
   month = date.getMonth()+1;
